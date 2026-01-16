@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caklora | Artisanal Cakes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sage: {
+                50: '#f4f7f4',
+                100: '#e2f0e3',
+                200: '#c5deca',
+                300: '#9bbf9d',
+                400: '#7fa481',
+                500: '#648866',
+                600: '#4e6b50',
+                700: '#3f5641',
+                800: '#344636',
+                900: '#2c3a2e',
+              },
+              cream: {
+                50: '#fdfbf7',
+                100: '#f9f5ed',
+                200: '#f3ead9',
+              }
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Montserrat', 'sans-serif'],
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+              'blob-reverse': 'blob-reverse 10s infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              'blob-reverse': {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(-30px, 50px) scale(1.1)' },
+                '66%': { transform: 'translate(20px, -20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        scroll-padding-top: 5rem; /* Accounts for the fixed navbar height */
+      }
+      body {
+        scroll-behavior: smooth;
+      }
+      .custom-scroll::-webkit-scrollbar {
+        width: 8px;
+      }
+      .custom-scroll::-webkit-scrollbar-track {
+        background: #fdfbf7;
+      }
+      .custom-scroll::-webkit-scrollbar-thumb {
+        background: #9bbf9d;
+        border-radius: 4px;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-cream-50 text-sage-900 font-sans custom-scroll">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+  </body>
+</html>
